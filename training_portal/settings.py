@@ -119,4 +119,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = ['training_portal/static']
 
+MEDIA_URL = '/uploads/'
+MEDIA_ROOT = BASE_DIR / 'uploads'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

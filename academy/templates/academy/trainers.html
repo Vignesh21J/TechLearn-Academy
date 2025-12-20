@@ -25,6 +25,7 @@
                 <th>Trainer name</th>
                 <th>Trainer Expertise</th>
                 <th>Trainer Email</th>
+                <th>Trainer's ProfileImage</th>
             </tr>
         </thead>
 
@@ -34,6 +35,13 @@
                     <td>{{ trainer.full_name }}</td>
                     <td>{{ trainer.expertise }}</td>
                     <td>{{ trainer.email }}</td>
+                    <td>
+                        {% if trainer.profile_image %}
+                            <img src="{{ trainer.profile_image.url }}" alt="img" width="100">
+                        {% else %}
+                            No Image
+                        {% endif %}
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>

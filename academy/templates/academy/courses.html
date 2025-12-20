@@ -25,6 +25,7 @@
                 <th>Course name</th>
                 <th>Course Description</th>
                 <th>Course Duration (in hr)</th>
+                <th>Course Image</th>
             </tr>
         </thead>
 
@@ -40,6 +41,13 @@
                         {% endif %}
                     </td>
                     <td>{{ course.duration }}</td>
+                    <td>
+                        {% if course.image %}
+                            <img src="{{ course.image.url }}" alt="img" width="100">
+                        {% else %}
+                            No Image
+                        {% endif %}
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>
