@@ -4,19 +4,19 @@ from academy.models import Course, Trainer, Student
 
 def Home(request):
 
-    courses = Course.objects.all()
-    courses_count = courses.count()
+    # courses = Course.objects.all()
+    # courses_count = courses.count()
 
-    trainers = Trainer.objects.all()
-    trainers_count = trainers.count()
+    courses = Course.objects.count()
 
-    students = Student.objects.all()
-    students_count = students.count()
+    trainers = Trainer.objects.count()
+
+    students = Student.objects.count()
 
     context = {
-        'courses_count':courses_count,
-        'trainers_count':trainers_count,
-        'students_count':students_count
+        'courses_count':courses,
+        'trainers_count':trainers,
+        'students_count':students
     }
 
     return render(request, "home.html", context)

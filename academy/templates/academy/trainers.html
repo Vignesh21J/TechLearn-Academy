@@ -33,7 +33,7 @@
             {% for trainer in trainers %}
                 <tr>
                     <td>{{ trainer.full_name }}</td>
-                    <td>{{ trainer.expertise }}</td>
+                    <td>{{ trainer.expertise.name }}</td>
                     <td>{{ trainer.email }}</td>
                     <td>
                         {% if trainer.profile_image %}
